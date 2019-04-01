@@ -6,41 +6,64 @@ var game = {
     levels: {
 
         start: {
-            message: "You come across a dark cave",
+            message: "You wake up from a nap and you're in the forest",
             choices: [
                 {
-                    text: "Enter the cave",
-                    nextLevel: "cave",
+                    text: " go back to sleep ",
+                    nextLevel: "start",
                 },
 
                 {
-                    text: "Keep on moving",
-                    nextLevel: "field",
+                    text: " get up and start walking ",
+                    nextLevel: "fork",
                 },
             ]
         },
 
-        cave: {
+        fork: {
             background_image: "fire.gif",
             music: "Final-Fantasy-7-Boss-Battle.mp3",
-            message: "You come across a fire monster or something!",
+            message: " you seee a fork in the road",
             choices: [
                 {
-                    text: "Start over",
+                    text: "you see your mom",
                     nextLevel: "start",
                 },
+                {
+                    
+                    text:"you see a yellow brick road",
+                    nextLevel:"phone"
+                }
             ]
         },
 
-        field: {
-            message: "Some adventurer you are...",
+        phone: {
+            message: " you find a phone at the end of the road",
             choices: [
                 {
-                    text: "Start over",
-                    nextLevel: "start",
+                    text: "Answer it ",
+                     nextLevel:"start"
+                },
+                { 
+                 text:"ignore it and keep walking",
+                 nextLevel:"wizard"
+                    
                 },
             ]
         },
+        
+        wizard : {
+            message:"you come across a wizard",
+            choices: [{
+                text:"talk to him",
+                nextLevel:"over"
+                }]
+            
+            },
+        over:{
+            message:"he send you home",
+            nextLevel:"start"
+        }
 
     }
 };
